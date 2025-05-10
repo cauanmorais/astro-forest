@@ -7,13 +7,15 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
+import entity.PLayer;
+
 public class GamePanel extends JPanel implements Runnable {
 
     // SCREEN SETTINGS 
     final int originalTileSize = 16; // 16x16 tile 
     final int scale = 3;
 
-    final int tileSize = originalTileSize * scale; // 48 x 48 tile 
+    public final int tileSize = originalTileSize * scale; // 48 x 48 tile 
     final int maxScreenCol = 16;
     final int maxScreenRow = 12;
     
@@ -25,11 +27,12 @@ public class GamePanel extends JPanel implements Runnable {
 
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
+    PLayer player = new PLayer(this, keyH);
 
-    //Set Player's default position
-    int playerX = 100;
-    int playerY = 100;
-    int playerSpeed = 5;
+    // //Set Player's default position
+    // int playerX = 100;
+    // int playerY = 100;
+    // int playerSpeed = 5;
 
     public GamePanel () {
 
@@ -53,15 +56,12 @@ public class GamePanel extends JPanel implements Runnable {
         double delta = 0;
         long lastTime = System.nanoTime();
         long currentTime;
-        long timer = 0;
-        long drawCount = 0;
 
         while (gameThread != null ) {
             
             currentTime = System.nanoTime();
 
             delta += (currentTime - lastTime) / drawInterval;
-            timer += (currentTime - lastTime);
             lastTime = currentTime;
 
             if(delta >= 1) {
@@ -70,34 +70,14 @@ public class GamePanel extends JPanel implements Runnable {
                 // DRAW: draw the screen with the updated information 
                 repaint();
                 delta--;
-                drawCount++;
             }
 
-            if(timer >= 1000000000) {
-                System.out.println("FPS");
-            }
         }
 
     }
 
     public void update () {
-
-        if(keyH.upPressed == true) {
-            playerY -= playerSpeed;
-            System.out.println ("Cima");
-        } 
-        if(keyH.downPressed == true) {
-            playerY += playerSpeed;
-            System.out.println ("Baixo");
-        }
-        if(keyH.leftPressed == true) {
-            playerX -= playerSpeed;
-            System.out.println ("Esquerda");
-        }
-        if(keyH.rightPressed == true) {
-            playerX += playerSpeed;
-            System.out.println ("Direita");
-        }
+        player.update();
     }
 
     public void paintComponent (Graphics g) {
@@ -106,9 +86,10 @@ public class GamePanel extends JPanel implements Runnable {
 
         Graphics2D g2 = (Graphics2D)g;
 
-        g2.setColor (Color.white);
-        
-        g2.fillRect (playerX,playerY,tileSize, tileSize);
+        player.draw(g2);
+
+        g2.dispose();
+
     }
     
 }

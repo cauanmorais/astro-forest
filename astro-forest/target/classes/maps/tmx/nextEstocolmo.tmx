@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="7">
- <tileset firstgid="1" source="../tsx/CP_V1.0.4.tsx"/>
- <tileset firstgid="4097" source="../tsx/Sci-Fi-Dungeon.tsx"/>
- <tileset firstgid="7297" source="../tsx/All_Rocket.tsx"/>
- <tileset firstgid="7657" source="../tsx/Rockets.tsx"/>
- <tileset firstgid="7668" source="../tsx/Cars-Sheet.tsx"/>
- <tileset firstgid="9972" source="../tsx/Houses Sprite Sheet.tsx"/>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="43">
+ <tileset firstgid="1" source="../../tilesets/tsx/CP_V1.0.4.tsx"/>
+ <tileset firstgid="4097" source="../../tilesets/tsx/Sci-Fi-Dungeon.tsx"/>
+ <tileset firstgid="7297" source="../../tilesets/tsx/All_Rocket.tsx"/>
+ <tileset firstgid="7657" source="../../tilesets/tsx/Rockets.tsx"/>
+ <tileset firstgid="7668" source="../../tilesets/tsx/Cars-Sheet.tsx"/>
+ <tileset firstgid="9972" source="../../tilesets/tsx/Houses Sprite Sheet.tsx"/>
  <layer id="1" name="Ground" width="48" height="12">
   <data encoding="csv">
 3270,3270,3270,3270,3270,3270,3270,2570,2562,2566,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,3270,2436,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,1610615302,
@@ -56,9 +56,9 @@
  </layer>
  <layer id="3" name="Buildings" width="48" height="12">
   <data encoding="csv">
-0,0,0,0,0,1102,1103,0,0,0,0,0,141,142,143,0,0,0,1096,1097,1098,0,0,49781,49782,49783,49784,49785,0,0,544,0,0,0,0,0,0,0,0,0,1107,1108,1109,0,0,0,0,0,
-0,0,0,0,0,1166,1167,0,0,0,0,0,205,206,207,0,0,0,1160,1161,1162,0,0,49921,49922,49923,49924,49925,0,0,0,0,0,0,0,0,0,0,0,0,1171,1172,1173,0,0,0,0,0,
-0,0,0,0,0,1230,1231,0,0,0,0,0,269,270,271,0,0,225,1224,1225,666,0,0,50061,50062,50063,50064,50065,0,0,0,0,0,0,0,0,0,0,0,0,1235,1236,1237,0,0,0,0,0,
+0,0,0,0,0,1102,1103,0,0,0,0,0,141,142,143,0,0,0,723,724,725,0,0,49781,49782,49783,49784,49785,0,0,544,0,0,0,0,0,0,0,0,0,1107,1108,1109,0,0,0,0,0,
+0,0,0,0,0,1166,1167,0,0,0,0,0,205,206,207,0,0,0,787,788,789,0,0,49921,49922,49923,49924,49925,0,0,0,0,0,0,0,0,0,0,0,0,1171,1172,1173,0,0,0,0,0,
+0,0,0,0,0,1230,1231,0,0,0,0,0,269,270,271,0,0,225,851,852,853,0,0,50061,50062,50063,50064,50065,0,0,0,0,0,0,0,0,0,0,0,0,1235,1236,1237,0,0,0,0,0,
 0,0,0,0,0,1434,1435,1436,0,0,0,0,333,334,335,0,0,0,0,0,0,0,0,50201,50202,50203,50204,50205,0,0,0,0,0,0,0,1090,1091,1092,1093,0,1299,1300,1301,0,0,0,0,0,
 0,0,0,0,0,1498,1499,1500,0,0,1883,1696,397,398,399,0,0,1696,0,0,0,1497,0,0,0,0,0,0,0,0,0,0,0,736,737,1154,1155,1156,1157,1696,1363,1364,1365,0,813,814,815,816,
 0,0,0,0,0,1562,1563,1564,0,0,1947,1760,461,462,463,0,0,1760,0,0,0,1561,0,0,0,0,0,0,0,0,542,542,542,800,801,1218,1219,1220,1221,1760,1427,1428,1429,670,877,878,879,880,
@@ -89,5 +89,40 @@
  <objectgroup id="5" name="Npc's"/>
  <objectgroup id="7" name="Rocket">
   <object id="6" gid="7666" x="27.7588" y="18.3772" width="44.09" height="23.02" rotation="90"/>
+ </objectgroup>
+ <objectgroup id="9" name="Colisao" visible="0">
+  <object id="8" name="colisao" type="hitBox" x="22.8221" y="15.7394" width="29.1178" height="48.792"/>
+  <object id="9" name="colisao" type="hitBox" x="77.9098" y="-3.93484" width="34.6266" height="51.9399"/>
+  <object id="10" name="colisao" type="hitBox" x="132.211" y="35.4136" width="23.609" height="42.4963"/>
+  <object id="11" name="colisao" type="hitBox" x="32.2657" y="142.441" width="45.6441" height="18.1003"/>
+  <object id="12" name="colisao" type="hitBox" x="16.5263" y="158.181" width="12.5915" height="34.6266"/>
+  <object id="13" name="colisao" type="hitBox" x="97.584" y="159.754" width="10.2306" height="31.4787"/>
+  <object id="14" name="colisao" type="hitBox" x="96.797" y="144.802" width="15.7394" height="16.5263"/>
+  <object id="15" name="colisao" type="hitBox" x="15.7394" y="146.376" width="13.3785" height="13.3785"/>
+  <object id="16" name="colisao" type="hitBox" x="48.005" y="165.263" width="13.3785" height="7.86968"/>
+  <object id="17" name="colisao" type="hitBox" x="81.0577" y="63.7444" width="14.1654" height="32.2657"/>
+  <object id="18" name="colisao" type="hitBox" x="161.328" y="63.7444" width="26.7569" height="30.6917"/>
+  <object id="19" name="colisao" type="hitBox" x="192.02" y="-3.93484" width="48.005" height="99.9449"/>
+  <object id="20" name="colisao" type="hitBox" x="239.238" y="112.536" width="66.8923" height="33.8396"/>
+  <object id="21" name="colisao" type="hitBox" x="242.386" y="63.7444" width="13.3785" height="30.6917"/>
+  <object id="22" name="colisao" type="hitBox" x="274.652" y="64.5314" width="11.0175" height="32.2657"/>
+  <object id="23" name="colisao" type="hitBox" x="317.396" y="138.911" width="51.6879" height="22.6135"/>
+  <object id="24" name="colisao" type="hitBox" x="398.966" y="140.527" width="47.6498" height="19.383"/>
+  <object id="25" name="colisao" type="hitBox" x="399.774" y="79.1471" width="64.6099" height="33.1126"/>
+  <object id="26" name="colisao" type="hitBox" x="369.084" y="33.9202" width="12.922" height="31.4973"/>
+  <object id="27" name="colisao" type="hitBox" x="379.583" y="2.42287" width="53.3032" height="51.6879"/>
+  <object id="28" name="colisao" type="hitBox" x="288.322" y="4.84574" width="49.2651" height="43.6117"/>
+  <object id="29" name="colisao" type="hitBox" x="338.394" y="67.0328" width="12.1144" height="28.2668"/>
+  <object id="31" name="colisao" type="hitBox" x="478.113" y="77.5319" width="50.0727" height="17.7677"/>
+  <object id="32" name="colisao" type="hitBox" x="479.729" y="1.61525" width="16.9601" height="15.3449"/>
+  <object id="33" name="colisao" type="hitBox" x="528.186" y="61.3794" width="23.4211" height="33.9202"/>
+  <object id="34" name="colisao" type="hitBox" x="559.683" y="52.4956" width="62.187" height="41.9964"/>
+  <object id="35" name="colisao" type="hitBox" x="625.909" y="63.8023" width="11.3067" height="29.0745"/>
+  <object id="36" name="colisao" type="hitBox" x="641.253" y="-2.42287" width="45.2269" height="97.7225"/>
+  <object id="37" name="colisao" type="hitBox" x="689.711" y="79.1471" width="12.1144" height="13.7296"/>
+  <object id="38" name="colisao" type="hitBox" x="688.903" y="96.1073" width="12.922" height="17.7677"/>
+  <object id="39" name="colisao" type="hitBox" x="689.711" y="131.643" width="13.7296" height="29.0745"/>
+  <object id="40" name="colisao" type="hitBox" x="607.333" y="90.4539" width="61.3794" height="36.3431"/>
+  <object id="41" name="colisao" type="hitBox" x="494.266" y="106.606" width="62.187" height="37.1507"/>
  </objectgroup>
 </map>
