@@ -7,7 +7,9 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
-import entity.PLayer;
+// import entity.PLayer;
+// import tile.TMXTileManager;
+// import tile.TMXTileManager;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -16,23 +18,19 @@ public class GamePanel extends JPanel implements Runnable {
     final int scale = 3;
 
     public final int tileSize = originalTileSize * scale; // 48 x 48 tile 
-    final int maxScreenCol = 16;
-    final int maxScreenRow = 12;
+    public final int maxScreenCol = 16;
+    public final int maxScreenRow = 12;
     
-    final int screenWidth = tileSize * maxScreenCol; // 768 pixels
-    final int screenHeight = tileSize * maxScreenRow; // 576 pixels
+    public final int screenWidth = tileSize * maxScreenCol; // 768 pixels
+    public final int screenHeight = tileSize * maxScreenRow; // 576 pixels
 
     // Frames Per Second
     int FPS = 60;
 
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
-    PLayer player = new PLayer(this, keyH);
-
-    // //Set Player's default position
-    // int playerX = 100;
-    // int playerY = 100;
-    // int playerSpeed = 5;
+    // PLayer player = new PLayer(this, keyH);
+    // TMXTileManager tileM = new TMXTileManager(this);
 
     public GamePanel () {
 
@@ -77,16 +75,18 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update () {
-        player.update();
+        // player.update();
     }
 
+    @Override
     public void paintComponent (Graphics g) {
         
         super.paintComponent (g);
 
         Graphics2D g2 = (Graphics2D)g;
 
-        player.draw(g2);
+        // tileM.draw(g2);
+        // player.draw(g2);
 
         g2.dispose();
 
